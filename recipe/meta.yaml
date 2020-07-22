@@ -20,6 +20,7 @@ requirements:
     - python
     - poetry
   run:
+    - six
     - python
     - typing-extensions
     - dataclasses
@@ -29,13 +30,8 @@ test:
   imports:
     - pypeln
     - pypeln.process
-    - pypeln.process.api
-    - pypeln.sync
-    - pypeln.sync.api
-    - pypeln.task
-    - pypeln.task.api
     - pypeln.thread
-    - pypeln.thread.api
+    - pypeln.asyncio_task
   requires:
     - pip
   commands:
