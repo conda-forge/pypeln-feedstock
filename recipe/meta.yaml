@@ -1,18 +1,18 @@
 {% set name = "pypeln" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.6" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "c9a3b72f981441e0ea7576cf54c4cd77289b6a2322497da43581cf9b47999ff4"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2819c62fe0e39b33fbdbdbec71b4b5b498ba99de240e536d749f87d7bd7b6f9e
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -39,14 +39,14 @@ test:
   requires:
     - pip
   commands:
-   - pip check
+    - pip check
 
 about:
-  home: "https://cgarciae.github.io/pypeln"
-  license: "MIT"
-  license_family: "MIT"
+  home: https://cgarciae.github.io/pypeln
+  license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
-  summary: "Concurrent data pipelines in Python"
+  summary: Concurrent data pipelines in Python
 
 extra:
   recipe-maintainers:
