@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python <3.9
     - poetry
   run:
-    - python
+    - python <3.9
     - typing-extensions
     - dataclasses
     - stopit >=1.1.2,<2.0.0
