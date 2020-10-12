@@ -5,11 +5,9 @@ Home: https://cgarciae.github.io/pypeln
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pypeln-feedstock/blob/master/LICENSE.txt)
 
 Summary: Concurrent data pipelines in Python
-
-
 
 Current build status
 ====================
