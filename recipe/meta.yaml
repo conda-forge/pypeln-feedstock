@@ -1,5 +1,5 @@
 {% set name = "pypeln" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4856e7990d979e51a8a80c9bddb5dda37d9ddbfe6320df3d2b05f8a82c5eaa0d
+  sha256: 01c1acc1b2307895107980d3216288898cf94ebe328e4888b93dead654211da5
 
 build:
   number: 0
