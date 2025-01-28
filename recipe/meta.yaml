@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 01c1acc1b2307895107980d3216288898cf94ebe328e4888b93dead654211da5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python <3.9
+    - python {{ python_min }}
     - poetry
   run:
-    - python <3.9
+    - python >={{ python_min }},<3.9
     - typing-extensions
     - dataclasses
     - stopit >=1.1.2,<2.0.0
@@ -38,6 +38,7 @@ test:
     - pypeln.thread.api
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
